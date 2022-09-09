@@ -86,7 +86,7 @@ const Home: NextPage = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.youtube.com/playlist?list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1"
+            href="https://github.com/aynp/portfolio"
             className="flex mt-8 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6">
             View Progress Here
             <svg
