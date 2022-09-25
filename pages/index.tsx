@@ -13,13 +13,11 @@ const Home: NextPage = () => {
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <div className="flex flex-col-reverse sm:flex-row items-start">
             <div className="flex flex-col pr-8">
-              <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-1 text-black dark:text-white">
-                Aryan Pathania
-              </h1>
-              <h2 className="text-gray-700 dark:text-gray-200 mb-4">
+              <h1 className="mb-1">Aryan Pathania</h1>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">
                 Computer Science Student at{' '}
                 <span className="font-semibold">NIT Hamirpur</span>
-              </h2>
+              </p>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
                 nemo amet aut facere rem error vel porro, natus fuga magnam!
@@ -33,14 +31,12 @@ const Home: NextPage = () => {
                 src="/avatar.jpg"
                 sizes="30vw"
                 priority
-                className="rounded-full filter grayscale"
+                className="rounded-full filter"
               />
             </div>
           </div>
 
-          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
-            Featured Posts
-          </h3>
+          <h2>Featured Posts</h2>
           <div className="flex gap-6 flex-col md:flex-row">
             <BlogPostCard
               title="Using Blockchain to Create NFT Based Warranties"
@@ -54,7 +50,7 @@ const Home: NextPage = () => {
             />
             <BlogPostCard
               title="Pathfinding Algorithms"
-              slug="rust"
+              slug="pathfinding-algorithms"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
           </div>
@@ -77,9 +73,7 @@ const Home: NextPage = () => {
             </a>
           </Link>
 
-          <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-4 mt-16 text-black dark:text-white">
-            This Portfolio is Under Construction
-          </h3>
+          <h2 className="mb-4 mt-16">This Portfolio is Under Construction</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             This portfolio is currently being worked upon.
           </p>
