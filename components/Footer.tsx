@@ -38,7 +38,7 @@ export default function Footer() {
           </ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
-          <Link href="/uses">
+          <Link href="/projects">
             <a className="text-gray-500 hover:text-gray-600 transition">
               Projects
             </a>
