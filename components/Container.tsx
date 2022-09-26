@@ -37,7 +37,7 @@ export default function Container(props: any) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Aryan Pathania - Developer, writer, creator.',
+    title: 'Aryan Pathania - Portfolio',
     description: `Computer Science and Enginnering Student`,
     image: '/social-banner.png',
     type: 'website',
