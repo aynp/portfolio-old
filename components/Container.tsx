@@ -73,6 +73,7 @@ export default function Container(props: any) {
           </a>
           <div className="ml-[-0.60rem]">
             <NavItem href="/" text="Home" />
+            <NavItem href="/timeline" text="Timeline" />
             <NavItem href="/blog" text="Blog" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/snippets" text="Snippets" />
