@@ -1,8 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Container from '../../components/Container';
+import BlogPost from '../../components/BlogPost';
+import { getFilesList } from '../../lib/mdx';
 
-const Blog: NextPage = () => {
+const Blog: NextPage = ({ blog }: any) => {
   return (
     <Container>
       <Head>
@@ -16,10 +18,27 @@ const Blog: NextPage = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-16">
             Blogs that I sometimes write.
           </p>
+
+          <div className="relative w-full mb-4">
+            {blog.map((v: any) => (
+              <BlogPost
+                title={v.title}
+                slug={v.slug}
+                summary={v.summary}
+                key={v.slug}
+                date={v.date}
+              />
+            ))}
+          </div>
         </div>
       </main>
     </Container>
   );
 };
+
+export async function getStaticProps() {
+  const blog = await getFilesList('blog');
+  return { props: { blog } };
+}
 
 export default Blog;
