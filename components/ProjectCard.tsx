@@ -9,7 +9,7 @@ export default function ProjectCard({
   image,
 }: any) {
   return (
-    <a href={'/projects/' + slug}>
+    <Link href={'/projects/' + slug}>
       <div className="flex flex-col max-w-sm h-96 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <Image
           className="rounded-t-lg"
@@ -49,6 +49,6 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
