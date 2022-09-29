@@ -21,7 +21,9 @@ function NavItem({ href, text }: any) {
             : 'font-normal text-gray-600 dark:text-gray-400',
           'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
         )}>
-        <span className="capsize">{text}</span>
+        <span className={cn(isActive ? 'active-menu-item' : '', 'capsize')}>
+          {text}
+        </span>
       </a>
     </NextLink>
   );

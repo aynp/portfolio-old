@@ -47,6 +47,13 @@ a {
   }
 }
 
+.active-menu-item {
+  color: blue;
+  background: -webkit-linear-gradient(#d8b4fe, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 #skip {
   scroll-margin-top: 1.125rem;
 }
