@@ -2,12 +2,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Container from '../../components/Container';
 import TimelineItem from '../../components/TimelineItem';
+import { parseJSON } from '../../lib/parseJSON';
 
-const DTDT: NextPage = () => {
+const Timeline: NextPage = ({ timeline }: any) => {
   return (
     <Container>
       <Head>
-        <title>DTDT | Aryan Pathania</title>
+        <title>Timeline | Aryan Pathania</title>
         <meta name="description" content="Blogs by Aryan" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -19,35 +20,28 @@ const DTDT: NextPage = () => {
             new learnings, discoveries, experiments, and other things here.
           </p>
 
-          <div className="">
-            <ol className="relative border-l border-gray-200 dark:border-gray-700">
+          <ol className="relative border-l border-gray-200 dark:border-gray-700">
+            {timeline.map((item: any, i: any) => (
               <TimelineItem
-                date="2nd February 2022"
-                title="Portfolio Website"
-                description="Started creating my own portfolio website for showcasing my projects and blogs."
-                link="/"
-                linktext="View more"
+                date={item.date || '--/--/----'}
+                title={item.title || 'No title'}
+                description={item.description || 'No description'}
+                key={i}
+                link={item.link || ''}
+                linktext={item.linktext || ''}
+                important={item.important || false}
               />
-              <TimelineItem
-                date="2nd February 2022"
-                title="E-Commerce UI code in Tailwind CSS"
-              />
-              <TimelineItem
-                date="April 2022"
-                title="Docker"
-                description="Getting started with docker"
-              />
-              <TimelineItem
-                date="April 2022"
-                title="Docker"
-                description="Getting started with docker"
-              />
-            </ol>
-          </div>
+            ))}
+          </ol>
         </div>
       </main>
     </Container>
   );
 };
 
-export default DTDT;
+// Will probably the data to a database instead of storing it in a json file in repository 🥲
+export async function getStaticProps() {
+  const props = await parseJSON('timeline.json');
+  return { props: props };
+}
+export default Timeline;

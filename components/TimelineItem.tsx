@@ -4,6 +4,7 @@ export default function TimelineItem({
   description,
   link,
   linktext,
+  important,
 }: any) {
   return (
     <li className="mb-6 ml-4">
@@ -11,9 +12,17 @@ export default function TimelineItem({
       <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
         {date}
       </time>
-      <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-        {title}
-      </h4>
+      {important ? (
+        <h4 className="text-2xl font-semibold text-gray-900 dark:text-white">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400">
+            {title}
+          </span>
+        </h4>
+      ) : (
+        <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+          {title}
+        </h4>
+      )}
       <p className="text-base font-normal text-gray-500 dark:text-gray-400">
         {description}
       </p>
