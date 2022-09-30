@@ -1,0 +1,66 @@
+{
+  "timeline": [
+    {
+      "date": "29th August 2022",
+      "name": "Portfolio Website",
+      "title": "Portfolio",
+      "description": "Started creating my own portfolio website for showcasing my projects and blogs.",
+      "link": "https://github.com/aynp/portfolio",
+      "linktext": "View project",
+      "important": true
+    },
+    {
+      "date": "August 2022",
+      "title": "Résumé",
+      "description": "Rewrote my résumé in LaTeX. Setup a GitHub action to automatically generate a PDF version of my résumé.",
+      "link": "https://github.com/aynp/resume",
+      "linktext": "View project",
+      "important": false
+    },
+    {
+      "date": "July 2022",
+      "title": "FlipKart Grid Hackathon",
+      "description": "Qualified for FlipKart Grid Round 2. Built a project to replace physical warranty cards with blockchain based digital warranty cards.",
+      "link": "https://github.com/aynp/nft-warranty",
+      "linktext": "View project",
+      "important": true
+    },
+    {
+      "date": "21st June 2022",
+      "title": "Dracula Wallpapers Website",
+      "description": "Started working on a website to host wallpapers based on the Dracula Theme.",
+      "link": "https://github.com/aynp/dracula-wallpapers",
+      "linktext": "View project"
+    },
+    {
+      "date": "11th May 2022",
+      "title": "Hello BSD",
+      "description": "Tried my first BSD based distro, ravynOS (previously airyx)."
+    },
+    {
+      "date": "29th December 2021",
+      "title": "Specialist",
+      "description": "Became specialist on Codeforces."
+    },
+    {
+      "date": "26th December 2021",
+      "title": "Arch btw",
+      "description": "Switched to Arch Linux after numerous attempts of installing it. Fixed audio and wifi issues that occured during previous installs."
+    },
+    {
+      "date": "28th September 2021",
+      "title": "Pupil",
+      "description": "Became pupil on Codeforces."
+    },
+    {
+      "date": "July 2021",
+      "title": "Web Development",
+      "description": "Got into web development."
+    },
+    {
+      "date": "March 2021",
+      "title": "Hello Linux",
+      "description": "Started using Linux as my primary OS. Installed Ubuntu 20.04 LTS (ofcouse)."
+    }
+  ]
+}
