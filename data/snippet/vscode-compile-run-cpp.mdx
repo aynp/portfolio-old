@@ -1,0 +1,51 @@
+---
+title: Compile & Run C++
+description: VS Code build task to compile & run the current C++ file in integrated terminal.
+image: /vscode.png
+---
+
+# Compile & Run C++
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "C/C++: Compile and Run",
+      "command": "g++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-Wconversion",
+        "-DLOCAL",
+        "-H",
+        "-o",
+        "a.out",
+        "${file}",
+        "&&",
+        "./a.out"
+      ],
+      "options": {
+        "cwd": "${fileDirname}",
+        "shell": {
+          "executable": "bash",
+          "args": ["-c"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": false,
+        "clear": true,
+        "showReuseMessage": true,
+        "focus": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
+```
