@@ -69,6 +69,7 @@ export async function getFilesList(type: string) {
         date: data.date || '--/--/----',
         slug: postSlug.replace('.mdx', ''),
         image: data.image || '',
+        link: data.link || '',
       },
       ...allPosts,
     ];
