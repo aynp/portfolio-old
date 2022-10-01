@@ -5,7 +5,7 @@ export default function ProjectCard({
   title,
   description,
   slug,
-  sourceCodeLink,
+  link,
   image,
 }: any) {
   return (
@@ -29,9 +29,9 @@ export default function ProjectCard({
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={sourceCodeLink}
+              href={link}
               className="flex mt-4 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transition-all h-6">
-              Source Code
+              View Project
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
