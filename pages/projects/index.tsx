@@ -23,6 +23,7 @@ const Projects: NextPage = ({ projects }: any) => {
               <ProjectCard
                 title={project.title}
                 slug={project.slug}
+                key={project.slug}
                 link={project.link}
                 image={project.image}
                 description={project.description}
