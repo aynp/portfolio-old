@@ -65,7 +65,7 @@ export async function getFilesList(type: string) {
       {
         content: content,
         title: data.title || 'Untitled Post',
-        summary: data.summary || 'This post has no summary',
+        description: data.description || 'This post has no description',
         date: data.date || '--/--/----',
         slug: postSlug.replace('.mdx', ''),
       },

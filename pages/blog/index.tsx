@@ -4,7 +4,7 @@ import Container from '../../components/Container';
 import BlogPost from '../../components/BlogPost';
 import { getFilesList } from '../../lib/mdx';
 
-const Blog: NextPage = ({ blog }: any) => {
+const Blog: NextPage = ({ blogs }: any) => {
   return (
     <Container>
       <Head>
@@ -20,11 +20,11 @@ const Blog: NextPage = ({ blog }: any) => {
           </p>
 
           <div className="relative w-full mb-4">
-            {blog.map((v: any) => (
+            {blogs.map((v: any) => (
               <BlogPost
                 title={v.title}
                 slug={v.slug}
-                summary={v.summary}
+                description={v.description}
                 key={v.slug}
                 date={v.date}
               />
@@ -37,8 +37,8 @@ const Blog: NextPage = ({ blog }: any) => {
 };
 
 export async function getStaticProps() {
-  const blog = await getFilesList('blog');
-  return { props: { blog } };
+  const blogs = await getFilesList('blog');
+  return { props: { blogs } };
 }
 
 export default Blog;

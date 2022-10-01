@@ -3,12 +3,12 @@ import Link from 'next/link';
 export default function BlogPost({
   slug,
   title,
-  summary,
+  description,
   date,
 }: {
   slug: string;
   title: string;
-  summary: string;
+  description: string;
   date: string;
 }) {
   return (
@@ -23,7 +23,7 @@ export default function BlogPost({
               {date}
             </p>
           </div>
-          <p className="text-gray-600 dark:text-gray-400">{summary}</p>
+          <p className="text-gray-600 dark:text-gray-400">{description}</p>
         </div>
       </a>
     </Link>
