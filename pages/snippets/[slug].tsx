@@ -13,9 +13,9 @@ export default function PostPage(post: any) {
 /* https://nextjs.org/docs/basic-features/data-fetching/overview */
 
 export async function getStaticPaths() {
-  const projects = await getFiles('snippet');
+  const snippets = await getFiles('snippet');
   return {
-    paths: projects.map((project) => ({
+    paths: snippets.map((project) => ({
       params: {
         slug: project.replace(/\.mdx/, ''),
       },

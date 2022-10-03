@@ -19,8 +19,8 @@ const Home: NextPage = () => {
                 <span className="font-semibold">NIT Hamirpur</span>
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-                nemo amet aut facere rem error vel porro, natus fuga magnam!
+                Welcome to my corner of the internet. Here I post my blogs,
+                projects, snippets that I frequently use.
               </p>
             </div>
             <div className="w-[80px] sm:w-[176px] relative mb-8 sm:mb-0 mr-auto">
@@ -40,17 +40,17 @@ const Home: NextPage = () => {
           <div className="flex gap-6 flex-col md:flex-row">
             <BlogPostCard
               title="Using Blockchain to Create NFT Based Warranties"
-              slug="nft-warranty"
+              link="/projects/nft-warranty"
               gradient="from-[#D8B4FE] to-[#818CF8]"
             />
             <BlogPostCard
-              title="Creating my Portfolio in Next.js"
-              slug="portfolio-nextjs"
+              title="Dracula Wallpapers"
+              link="/projects/dracula-wallpapers"
               gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
             />
             <BlogPostCard
-              title="Pathfinding Algorithms"
-              slug="pathfinding-algorithms"
+              title="Pathfinding and Maze Solving Algorithms"
+              link="/projects/pathfinding-algorithms"
               gradient="from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]"
             />
           </div>
