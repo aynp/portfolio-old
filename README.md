@@ -1,9 +1,22 @@
 # Aryan Pathania
 
+> My corner on the internet
+
 ## Links
 
-### [GitHub Account](https://github.com/aynp)
+- [GitHub Account](https://github.com/aynp)
+- [LinkedIn Account](linkedin.com/in/aryanpathania03)
+- [Résumé](https://raw.githubusercontent.com/aynp/resume/main/resume.pdf)
 
-### [LinkedIn Account](linkedin.com/in/aryanpathania03)
+## About Site
 
-### [Résumé](https://raw.githubusercontent.com/aynp/resume/main/resume.pdf)
+### Built With
+
+- Next.js
+- Tailwind CSS
+- MDX
+
+### Acknowledgements
+
+Some of the UI elements (Homepage, SnippetCards) are borrowed from [leerob.io](leerob.io).  
+I plan on moving to a bespoke design stedily over time.
