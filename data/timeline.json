@@ -1,6 +1,14 @@
 {
   "timeline": [
     {
+      "date": "5 October 2022",
+      "title": "Package on NPM",
+      "description": "Published my first package on NPM.",
+      "link": "https://www.npmjs.com/package/github-to-json",
+      "linktext": "View on NPM",
+      "important": false
+    },
+    {
       "date": "29th August 2022",
       "name": "Portfolio Website",
       "title": "Portfolio",
