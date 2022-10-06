@@ -2,7 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Container from '../../components/Container';
 import BlogPost from '../../components/BlogPost';
-import { getFilesList } from '../../lib/mdx';
+import { getDatabase } from '../../lib/notion';
+
+const blogDatabaseId = process.env.NOTION_BLOG_DATABASE_ID || '';
 
 const Blog: NextPage = ({ blogs }: any) => {
   return (
@@ -20,13 +22,15 @@ const Blog: NextPage = ({ blogs }: any) => {
           </p>
 
           <div className="relative w-full mb-4">
-            {blogs.map((v: any) => (
+            {blogs.map((blog: any) => (
               <BlogPost
-                title={v.title}
-                slug={v.slug}
-                description={v.description}
-                key={v.slug}
-                date={v.date}
+                title={blog.properties.Name.title[0].plain_text}
+                slug={blog.slug}
+                description={
+                  blog.properties.Description.rich_text[0].plain_text
+                }
+                key={blog.id}
+                date={new Date(blog.created_time).toLocaleDateString('en-UK')}
               />
             ))}
           </div>
@@ -37,8 +41,13 @@ const Blog: NextPage = ({ blogs }: any) => {
 };
 
 export async function getStaticProps() {
-  const blogs = await getFilesList('blog');
-  return { props: { blogs } };
+  const response = await getDatabase(blogDatabaseId);
+
+  return {
+    props: {
+      blogs: response,
+    },
+  };
 }
 
 export default Blog;
