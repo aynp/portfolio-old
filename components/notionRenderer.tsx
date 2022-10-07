@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import Head from 'next/head';
+import Image from 'next/image';
 
 export const Text = ({ text }: any) => {
   if (!text) {
@@ -105,7 +106,7 @@ const renderBlock = (block: any) => {
       const caption = value.caption ? value.caption[0]?.plain_text : '';
       return (
         <figure className="mb-4">
-          <img src={src} alt={caption} />
+          <Image src={src} alt={caption} />
           {caption && (
             <figcaption className="text-black dark:text-white">
               {caption}
