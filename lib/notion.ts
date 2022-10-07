@@ -2,7 +2,7 @@ import { Client } from '@notionhq/client';
 
 const notionApiKey: string = process.env.NOTION_API_KEY || '';
 
-const notion = new Client({ auth: notionApiKey });
+export const notion = new Client({ auth: notionApiKey });
 
 export const getDatabase = async (databaseId: string) => {
   const response = await notion.databases.query({
