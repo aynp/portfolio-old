@@ -19,6 +19,9 @@ const nextConfig = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['raw.githubusercontent.com', 'images.unsplash.com'],
+  },
   experimental: { images: { allowFutureImage: true } },
 };
 
