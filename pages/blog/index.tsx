@@ -4,7 +4,7 @@ import Container from '../../components/Container';
 import BlogPost from '../../components/BlogPost';
 import { getDatabase } from '../../lib/notion';
 
-const blogDatabaseId = process.env.NOTION_BLOG_DATABASE_ID || '';
+export const blogDatabaseId = process.env.NOTION_BLOG_DATABASE_ID || '';
 
 const Blog: NextPage = ({ blogs }: any) => {
   return (
@@ -25,7 +25,7 @@ const Blog: NextPage = ({ blogs }: any) => {
             {blogs.map((blog: any) => (
               <BlogPost
                 title={blog.properties.Name.title[0].plain_text}
-                slug={blog.slug}
+                slug={blog.id}
                 description={
                   blog.properties.Description.rich_text[0].plain_text
                 }
