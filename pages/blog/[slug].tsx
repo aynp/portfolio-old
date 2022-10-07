@@ -1,33 +1,29 @@
-import { MDXRemote } from 'next-mdx-remote';
 import BlogLayout from '../../components/BlogLayout';
-import { getFiles, mdxFileToHtml } from '../../lib/mdx';
+import Container from '../../components/Container';
+import NotionPost from '../../components/notionRenderer';
+import { getDatabase, getPostProps } from '../../lib/notion';
 
-export default function PostPage(post: any) {
+export const blogDatabaseId = process.env.NOTION_BLOG_DATABASE_ID || '';
+
+export default function PostPage(props: any) {
   return (
-    <BlogLayout post={post}>
-      <MDXRemote {...post} />
-    </BlogLayout>
+    <div className="">
+      <Container>{NotionPost(props)}</Container>
+    </div>
   );
 }
 
-/* https://nextjs.org/docs/basic-features/data-fetching/overview */
-
 export async function getStaticPaths() {
-  const blogs = await getFiles('blog');
+  const database = await getDatabase(blogDatabaseId);
   return {
-    paths: blogs.map((blog) => ({
-      params: {
-        slug: blog.replace(/\.mdx/, ''),
-      },
-    })),
-    fallback: false,
+    paths: database.map((page) => ({ params: { slug: page.id } })),
+    fallback: true,
   };
 }
 
 // This function gets called at build time on server-side.
 // It won't be called on client-side, so you can even do direct database queries.
 export async function getStaticProps({ params }: any) {
-  const post = await mdxFileToHtml('blog', params.slug);
-
-  return { props: post };
+  const { slug } = params;
+  return await getPostProps(slug);
 }
