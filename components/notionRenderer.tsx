@@ -8,13 +8,14 @@ export const Text = ({ text }: any) => {
   if (!text) {
     return null;
   }
-  return text.map((value: any) => {
+  return text.map((value: any, i: number) => {
     const {
       annotations: { bold, code, color, italic, strikethrough, underline },
       text,
     } = value;
     return (
       <span
+        key={i}
         className={[
           bold ? 'font-bold' : '',
           code ? 'rounded bg-gray-200 dark:bg-gray-600 p-0.5 font-mono' : '',
