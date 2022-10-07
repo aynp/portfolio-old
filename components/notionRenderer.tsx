@@ -107,7 +107,7 @@ const renderBlock = (block: any) => {
       const caption = value.caption ? value.caption[0]?.plain_text : '';
       return (
         <figure className="mb-4">
-          <Image src={src} alt={caption} />
+          <Image height={768} width={1366} src={src} alt={caption} />
           {caption && (
             <figcaption className="text-black dark:text-white">
               {caption}
