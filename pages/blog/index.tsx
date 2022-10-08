@@ -43,10 +43,10 @@ const Blog: NextPage = ({ blogs }: any) => {
 
 export async function getStaticProps() {
   const blogs = await getDatabase(blogDatabaseId);
-  blogs.map((blog: any) => {
-    blog.slug = blog.properties.slug.rich_text[0].plain_text;
-    saveSlug.set('blog', blog.slug, blog.id);
-  });
+  // blogs.map((blog: any) => {
+  //   blog.slug = blog.properties.slug.rich_text[0].plain_text;
+  //   saveSlug.set('blog', blog.slug, blog.id);
+  // });
 
   return {
     props: {

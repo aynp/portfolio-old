@@ -1,3 +1,4 @@
+import { PageObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import BlogLayout from '../../components/BlogLayout';
 import Container from '../../components/Container';
 import NotionPost from '../../components/notionRenderer';
@@ -28,6 +29,10 @@ export async function getStaticPaths() {
 // It won't be called on client-side, so you can even do direct database queries.
 export async function getStaticProps({ params }: any) {
   const { slug } = params;
-  const pageID = await saveSlug.get('blog', slug);
-  return await getPostProps(pageID);
+  const database = await getDatabase(blogDatabaseId);
+  const post = database.find((page: any) => {
+    return page.properties.slug.rich_text[0].plain_text === slug;
+  });
+  // const pageID = await saveSlug.get('blog', slug);
+  return await getPostProps((post as PageObjectResponse).id);
 }
