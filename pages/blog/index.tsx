@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Container from '../../components/Container';
 import BlogPost from '../../components/BlogPost';
 import { getDatabase } from '../../lib/notion';
+import saveSlug from '../../lib/saveSlug';
 
 export const blogDatabaseId = process.env.NOTION_BLOG_DATABASE_ID || '';
 
@@ -25,7 +26,7 @@ const Blog: NextPage = ({ blogs }: any) => {
             {blogs.map((blog: any) => (
               <BlogPost
                 title={blog.properties.Name.title[0].plain_text}
-                slug={blog.id}
+                slug={blog.slug}
                 description={
                   blog.properties.Description.rich_text[0].plain_text
                 }
@@ -41,11 +42,15 @@ const Blog: NextPage = ({ blogs }: any) => {
 };
 
 export async function getStaticProps() {
-  const response = await getDatabase(blogDatabaseId);
+  const blogs = await getDatabase(blogDatabaseId);
+  blogs.map((blog: any) => {
+    blog.slug = blog.properties.slug.rich_text[0].plain_text;
+    saveSlug.set('blog', blog.slug, blog.id);
+  });
 
   return {
     props: {
-      blogs: response,
+      blogs,
     },
   };
 }
