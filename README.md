@@ -18,5 +18,5 @@
 
 ### Acknowledgements
 
-Some of the UI elements (Homepage, SnippetCards) are borrowed from [leerob.io](leerob.io).  
+Some of the UI elements (Homepage, SnippetCards) are borrowed from [leerob.io](https://leerob.io).  
 I plan on moving to a bespoke design stedily over time.
