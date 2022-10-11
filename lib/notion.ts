@@ -1,4 +1,5 @@
 import { Client } from '@notionhq/client';
+import { NotionPage } from '../types/Notion';
 
 const notionApiKey: string = process.env.NOTION_API_KEY || '';
 
@@ -8,7 +9,7 @@ export const getDatabase = async (databaseId: string) => {
   const response = await notion.databases.query({
     database_id: databaseId,
   });
-  return response.results;
+  return response.results as NotionPage[];
 };
 
 export const getPage = async (pageId: string) => {

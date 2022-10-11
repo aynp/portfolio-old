@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
 import Head from 'next/head';
 import Image from 'next/image';
+import { NotionPage } from '../types/Notion';
 
 export const Text = ({ text }: any) => {
   if (!text) {
@@ -159,7 +160,13 @@ const renderBlock = (block: any) => {
   }
 };
 
-export default function NotionPost({ page, blocks }: any) {
+export default function NotionPost({
+  page,
+  blocks,
+}: {
+  page: NotionPage;
+  blocks: any[];
+}) {
   if (!page || !blocks) {
     return <div />;
   }
@@ -167,13 +174,13 @@ export default function NotionPost({ page, blocks }: any) {
   return (
     <div>
       <Head>
-        <title>{page.properties.Name.title[0].plain_text}</title>
+        <title>{page.properties.Title.title[0].plain_text}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <article className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-16">
         <h1 className="mb-4">
-          <Text text={page.properties.Name.title} />
+          <Text text={page.properties.Title.title} />
         </h1>
         <section className="w-full">
           {blocks.map((block: any) => (

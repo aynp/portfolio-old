@@ -3,11 +3,15 @@ import Head from 'next/head';
 import Container from '../../components/Container';
 import BlogPost from '../../components/BlogPost';
 import { getDatabase } from '../../lib/notion';
-import saveSlug from '../../lib/saveSlug';
+import { NotionPage } from '../../types/Notion';
 
 export const blogDatabaseId = process.env.NOTION_BLOG_DATABASE_ID || '';
 
-const Blog: NextPage = ({ blogs }: any) => {
+type Prop = {
+  blogs: NotionPage[];
+};
+
+const Blog: NextPage<Prop> = ({ blogs }) => {
   return (
     <Container>
       <Head>
@@ -23,10 +27,10 @@ const Blog: NextPage = ({ blogs }: any) => {
           </p>
 
           <div className="relative w-full mb-4">
-            {blogs.map((blog: any) => (
+            {blogs.map((blog) => (
               <BlogPost
-                title={blog.properties.Name.title[0].plain_text}
-                slug={blog.slug}
+                title={blog.properties.Title.title[0].plain_text}
+                slug={blog.properties.slug.rich_text[0].plain_text}
                 description={
                   blog.properties.Description.rich_text[0].plain_text
                 }
@@ -43,6 +47,7 @@ const Blog: NextPage = ({ blogs }: any) => {
 
 export async function getStaticProps() {
   const blogs = await getDatabase(blogDatabaseId);
+
   // blogs.map((blog: any) => {
   //   blog.slug = blog.properties.slug.rich_text[0].plain_text;
   //   saveSlug.set('blog', blog.slug, blog.id);
