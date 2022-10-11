@@ -6,12 +6,7 @@ import { getFilesList } from '../../lib/mdx';
 
 const Blog: NextPage = ({ blogs }: any) => {
   return (
-    <Container>
-      <Head>
-        <title>Blog | Aryan Pathania</title>
-        <meta name="description" content="Blogs by Aryan" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Container title="Blog | Aryan Pathania" description="Blogs by Aryan">
       <main>
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <h1 className="mb-4">Blog</h1>

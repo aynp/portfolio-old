@@ -6,12 +6,9 @@ import { getFilesList } from '../../lib/mdx';
 
 const Projects: NextPage = ({ projects }: any) => {
   return (
-    <Container>
-      <Head>
-        <title>Projects | Aryan Pathania</title>
-        <meta name="description" content="Projects by Aryan" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Container
+      title="Projects | Aryan Pathania"
+      description="Projects by Aryan">
       <main>
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <h1 className="mb-4">Projects</h1>

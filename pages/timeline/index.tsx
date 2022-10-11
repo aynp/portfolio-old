@@ -6,12 +6,7 @@ import { parseJSON } from '../../lib/parseJSON';
 
 const Timeline: NextPage = ({ timeline }: any) => {
   return (
-    <Container>
-      <Head>
-        <title>Timeline | Aryan Pathania</title>
-        <meta name="description" content="Blogs by Aryan" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Container title="Timeline | Aryan Pathania">
       <main>
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <h1 className="mb-4">Timeline</h1>
