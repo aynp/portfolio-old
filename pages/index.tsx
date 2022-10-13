@@ -73,7 +73,7 @@ const Home: NextPage = () => {
             </a>
           </Link>
 
-          <h2 className="mb-4 mt-16">This Portfolio is Under Construction</h2>
+          <h2 className="mb-4 mt-16">🚧 Under Construction</h2>
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             This portfolio is currently being worked upon.
           </p>
