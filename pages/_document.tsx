@@ -11,6 +11,10 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <meta
+          name="google-site-verification"
+          content="zc0DGB1EH1rumsoYrHxcNJho1kwE6P9euu0T8eRE-cI"
+        />
       </Head>
       <body className="bg-white dark:bg-black text-white dark:text-black">
         <Main />
