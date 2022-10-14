@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://aryanpathania.vercel.app/sitemap.xml
