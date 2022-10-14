@@ -16,11 +16,12 @@ const Custom404: NextPage = () => {
             fill="currentColor"
           />
         </svg>
-        <p>"Nothing ventured, nothing gained."</p>
+        <p>&quot; Nothing ventured, nothing gained &quot;</p>
       </blockquote>
       <div className="text-center max-w-2xl">
         <div className="text-white sm:text-lg mb-3">
-          For now, it looks like the page you are looking for doesn't exist.
+          For now, it looks like the page you are looking for doesn&apos;t
+          exist.
         </div>
         <div className="text-blue-500 sm:text-lg">
           <Link href="/">Return home ~</Link>
