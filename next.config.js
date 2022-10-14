@@ -20,6 +20,26 @@ const nextConfig = {
     defaultLocale: 'en',
   },
   experimental: { images: { allowFutureImage: true } },
+  async redirects() {
+    return [
+      {
+        source: '/resume',
+        destination:
+          'https://raw.githubusercontent.com/aynp/resume/main/resume.pdf',
+        permanent: true,
+      },
+      {
+        source: '/github',
+        destination: 'https://github.com/aynp',
+        permanent: true,
+      },
+      {
+        source: '/linkedin',
+        destination: 'https://linkedin.com/in/aryanpathania03/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = {
