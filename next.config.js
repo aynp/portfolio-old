@@ -19,6 +19,7 @@ const nextConfig = {
     locales: ['en'],
     defaultLocale: 'en',
   },
+  experimental: { appDir: true },
   async redirects() {
     return [
       {
