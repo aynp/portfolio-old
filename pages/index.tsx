@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import type { NextPage } from 'next';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import Container from '../components/Container';
