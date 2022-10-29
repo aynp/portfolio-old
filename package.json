@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "turbo-dev": "concurrently \"next dev --turbo\" \"tailwindcss --input input.css --output output.css --watch\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
