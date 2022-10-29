@@ -6,6 +6,7 @@ import NextLink from 'next/link';
 
 import cn from 'classnames';
 
+import MobileMenu from './MobileMenu';
 import Footer from './Footer';
 
 function NavItem({ href, text }: any) {
@@ -74,6 +75,7 @@ export default function Container(props: any) {
             Skip to content
           </a>
           <div className="ml-[-0.60rem]">
+            <MobileMenu />
             <NavItem href="/" text="Home" />
             <NavItem href="/timeline" text="Timeline" />
             <NavItem href="/blog" text="Blog" />
