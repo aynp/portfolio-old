@@ -16,16 +16,20 @@ export default function Footer() {
       <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
       <div className="w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
         <div className="flex flex-col space-y-4">
-          <Link href="/">
-            <a className="text-gray-500 hover:text-gray-600 transition">Home</a>
+          <Link
+            href="/"
+            className="text-gray-500 hover:text-gray-600 transition">
+            Home
           </Link>
-          <Link href="/blog">
-            <a className="text-gray-500 hover:text-gray-600 transition">Blog</a>
+          <Link
+            href="/blog"
+            className="text-gray-500 hover:text-gray-600 transition">
+            Blog
           </Link>
-          <Link href="/about">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              About
-            </a>
+          <Link
+            href="/about"
+            className="text-gray-500 hover:text-gray-600 transition">
+            About
           </Link>
         </div>
         <div className="flex flex-col space-y-4">
@@ -38,15 +42,15 @@ export default function Footer() {
           </ExternalLink>
         </div>
         <div className="flex flex-col space-y-4">
-          <Link href="/projects">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              Projects
-            </a>
+          <Link
+            href="/projects"
+            className="text-gray-500 hover:text-gray-600 transition">
+            Projects
           </Link>
-          <Link href="/snippets">
-            <a className="text-gray-500 hover:text-gray-600 transition">
-              Snippets
-            </a>
+          <Link
+            href="/snippets"
+            className="text-gray-500 hover:text-gray-600 transition">
+            Snippets
           </Link>
         </div>
       </div>
