@@ -10,7 +10,7 @@ import NextLink from 'next/link';
 
 import cn from 'classnames';
 
-import MobileMenu from './MobileMenu';
+import MobileMenu from '../components/MobileMenu';
 
 function NavItem({ href, text }: any) {
   const currPath = usePathname();
