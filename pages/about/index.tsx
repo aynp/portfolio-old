@@ -8,8 +8,8 @@ const About: NextPage = () => {
         <div className="flex flex-col justify-center items-start max-w-2xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <h1 className="mb-8">About Me</h1>
           <p className="text-gray-700 dark:text-gray-200 mb-4">
-            Hey, I'm Aryan Pathania, a Computer Science and Engineering student
-            at National Institute of Technology, Hamirpur.
+            Hey, I&apos;m Aryan Pathania, a Computer Science and Engineering
+            student at National Institute of Technology, Hamirpur.
           </p>
           <p className="text-gray-700 dark:text-gray-200 mb-4">
             I like using emojies in commit messages.
@@ -38,7 +38,7 @@ const About: NextPage = () => {
             </ul>
           </p>
           <p className="text-gray-700 dark:text-gray-200 mb-4">
-            Here I some technologies I want to explore but haven't yet
+            Here I some technologies I want to explore but haven&apos;t yet
             <ul className="list-disc">
               <li>Rust</li>
             </ul>
