@@ -1,12 +1,47 @@
 {
   "timeline": [
     {
-      "date": "5 October 2022",
+      "date": "March 2023 - Present",
+      "title": "Backend Developer Intern at SynergyWorks",
+      "description": "Improving MongoDB queries"
+    },
+    {
+      "date": "1st March 2023",
+      "title": "Mercari India",
+      "description": "Accepted the position for Backend Developer Summer Intern at Mercari India.",
+      "important": true
+    },
+    {
+      "date": "29 January 2023",
+      "title": "Apache APISIX 👋",
+      "description": "First accepted PR in apache/apisix-ingress-controller. Also the first one in Go.",
+      "link": "https://github.com/apache/apisix-ingress-controller/pull/1545",
+      "linktext": "View on GitHub"
+    },
+    {
+      "date": "January 2023 - March 2023",
+      "title": "Backend Developer Intern at Coding Shuttle 🚀",
+      "description": "Handled backend development and it's integration with the frontend."
+    },
+    {
+      "date": "December 2022",
+      "title": "Go",
+      "description": "Started learning The Go Programming Language.",
+      "link": "https://github.com/aynp",
+      "linktext": "View GitHub Profile",
+      "important": true
+    },
+    {
+      "date": "November 2022 - January 2023",
+      "title": "Problem Setter at Codeintuition.io",
+      "description": "Generated optimal solutions for problems based on Data Structures and Algorithms in TypeScript."
+    },
+    {
+      "date": "5th October 2022",
       "title": "Package on NPM",
       "description": "Published my first package on NPM.",
       "link": "https://www.npmjs.com/package/github-to-json",
-      "linktext": "View on NPM",
-      "important": false
+      "linktext": "View on NPM"
     },
     {
       "date": "29th August 2022",
