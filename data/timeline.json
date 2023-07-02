@@ -1,15 +1,22 @@
 {
   "timeline": [
     {
-      "date": "March 2023 - Present",
+      "date": "16th May 2023",
+      "title": "Joined Mercari India",
+      "description": "Joined Mercari India as Backend Developer Intern.",
+      "important": true,
+      "linktext": "View LinkedIn Post",
+      "link": "https://www.linkedin.com/posts/mercari-india_mercari-mercariindia-welcometotheteam-activity-7066996799869231104-ezFY?utm_source=share&utm_medium=member_desktop"
+    },
+    {
+      "date": "March 2023 - May 2023",
       "title": "Backend Developer Intern at SynergyWorks",
       "description": "Improving MongoDB queries"
     },
     {
       "date": "1st March 2023",
       "title": "Mercari India",
-      "description": "Accepted the position for Backend Developer Summer Intern at Mercari India.",
-      "important": true
+      "description": "Accepted the position for Backend Developer Summer Intern at Mercari India."
     },
     {
       "date": "29 January 2023",

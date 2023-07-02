@@ -15,8 +15,12 @@ const Home: NextPage = () => {
             <div className="flex flex-col pr-8">
               <h1 className="mb-1">Aryan Pathania</h1>
               <p className="text-gray-700 dark:text-gray-200 mb-4">
-                Computer Science Student at{' '}
-                <span className="font-semibold">NIT Hamirpur</span>
+                Backend Intern at{' '}
+                <span className="font-semibold">
+                  <Link href={'https://about.in.mercari.com/'}>
+                    Mercari India
+                  </Link>
+                </span>
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-16">
                 Welcome to my corner of the internet. Here I post my blogs,
